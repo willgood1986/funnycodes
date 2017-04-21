@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JudgeImageType", "JudgeImageType\JudgeImageType.csproj", "{47E6398B-23FA-4E68-8DB3-7A06D3A907BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestListThreadSafety", "TestListThreadSafety\TestListThreadSafety.csproj", "{E9F5411C-E5EE-4961-B44C-02A5713BF244}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47E6398B-23FA-4E68-8DB3-7A06D3A907BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47E6398B-23FA-4E68-8DB3-7A06D3A907BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47E6398B-23FA-4E68-8DB3-7A06D3A907BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47E6398B-23FA-4E68-8DB3-7A06D3A907BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9F5411C-E5EE-4961-B44C-02A5713BF244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9F5411C-E5EE-4961-B44C-02A5713BF244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9F5411C-E5EE-4961-B44C-02A5713BF244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9F5411C-E5EE-4961-B44C-02A5713BF244}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
