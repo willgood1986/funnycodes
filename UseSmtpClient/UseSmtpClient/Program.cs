@@ -27,6 +27,8 @@ namespace UseSmtpClient
 
 		private static readonly String PORT = "port";
 
+		private static readonly String IgnoreCertificate = "ignorecertificate";
+
 
 		private static Boolean mailSent = false;
 
@@ -88,6 +90,17 @@ namespace UseSmtpClient
 			return result;
 		}
 
+		private static void CheckIfIgnoreCertificate(
+			Boolean i_ignoreCertificate
+			)
+		{
+			if (i_ignoreCertificate)
+			{
+				ServicePointManager.ServerCertificateValidationCallback =
+					(senderman, certificate, chain, sllPolicyErrors) => true;
+			}
+		}
+
 		private static void SendEmail(
 			)
 		{
@@ -109,6 +122,8 @@ namespace UseSmtpClient
 
 			var recipientList = new List<String>(recipients.Split(';'));
 
+			var ignoreCertificate = GetBooleanSettingValue(IgnoreCertificate);
+
 			smtpClient.EnableSsl = useSsl;
 
 			Console.WriteLine("SSL= {0}", useSsl ? "On" : "Off");
@@ -116,6 +131,8 @@ namespace UseSmtpClient
 			smtpClient.UseDefaultCredentials = false;
 			smtpClient.Credentials = new NetworkCredential(
 				credential_user, credential_password);
+
+			CheckIfIgnoreCertificate(ignoreCertificate);
 
 			Console.WriteLine("Credential, User: {0}", credential_user);
 
