@@ -8,6 +8,7 @@ using System.ComponentModel;
 using System.Net;
 using System.Configuration;
 using System.Globalization;
+using System.Data;
 
 namespace UseSmtpClient
 {
@@ -141,6 +142,7 @@ namespace UseSmtpClient
 			var message = new MailMessage();
 
 			message.From = from;
+
 			Console.WriteLine("Sender:" + from.Address);
 
 			foreach (var recipient in recipientList)
@@ -191,7 +193,11 @@ namespace UseSmtpClient
 
 		static void Main(string[] args)
 		{
-			SendEmail();
+			//SendEmail();
+
+			var dt = new DataTable();
+
+			Console.WriteLine(dt.Rows != null);
 
 			Console.WriteLine();
 
