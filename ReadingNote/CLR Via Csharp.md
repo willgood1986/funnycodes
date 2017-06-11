@@ -134,3 +134,33 @@ necessary to ensure that the file hasn’t been tampered with.
    ```
 
 ### Chapter 4
+1. All types except for System.Object is inherited from System.Object by default.
+2. There are four public method in System.Object.
+  - ToString()
+  - GetHashCode
+  - Equals
+  - GetType()
+3. There are two overhead memebers, one is Type Object Pointer, the other is Sync Block Index on heap.
+4. Stacks build from High adress to Low address. They are used for passing arguments and storing local variables for methods. When calling another method, first pushing arguments one by one to stack, then put the return address then. This can make sure that when method is executed, the pointer can return to source method.
+5. After referred Assemblies are loaded, create types used on the heap.
+### Chapter 5
+1. By default, overflow checking is turned off. It makes the code runs faster. One way to get the C# compiler to control overflows is to use the /checked+ compiler switch.  Programmers can control overflow checking in checking in specific regions of their code.
+2. The variable representing the instance doesn't contain a pointer to an instance; the variable  contains the fields of the instance itself. Value type instances don't come under the control of the garbage collector,
+Integer, Boolean, Decimal, Timespan, Enumeration
+3. Even though you can't choose a base type when defining your own value type, a value type can implement one or more interfaces if you choose. In addition, all value types are sealed, which prevents a value type from being used as a base type for any other reference type or value type.
+
+SomeVal v1 = new SomeVal(). It would zero all of the fields in the value type instance.
+
+4. When a type offers no members that alter its fields, we say that the type is immutable. In fact, it is recommended that many value types mark all their fields as readonly.
+
+5. The size of instances of your type is also a condition to take into account because by default, arguments are passed by value, which causes the fields in the value type instances to be copied, hurting performance.
+
+6. It is obvious that the C# compiler team believes that structures are commonly used when inter-operating with unmanaged code, and for this to work, the fields must stay in the order defined by the programmer.  However, if you are creating a value type that has nothing to do with interoperability with unmanaged code, you could override the C# compiler's default.  Explicit layout is typically used to simulate what would be a union in unmanaged C/C++ because you can have multiple fields starting at the same offset in memory.
+
+7.It's possible to convert a value type to a reference type by using a mechanism called boxing. p129
+
+8. One of the biggest improvements is that the generic collection classes allow you to work with collections of value types without requiring that items in the collection be boxed/unboxed.
+
+9. This in itself greatly improves performance because fewer objects will be created on the managed heap thereby reducing the number of garbage collections required by your application.
+
+10 Furthermore, you will get compile-time type safety, and your source code will be cleaner due to fewer casts. 
