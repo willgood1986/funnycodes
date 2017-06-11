@@ -132,3 +132,5 @@ necessary to ensure that the file hasn’t been tampered with.
    ```
    SN.exe -Vu MyAssembly.dll
    ```
+
+### Chapter 4
