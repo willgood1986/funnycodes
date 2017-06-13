@@ -164,3 +164,25 @@ SomeVal v1 = new SomeVal(). It would zero all of the fields in the value type in
 9. This in itself greatly improves performance because fewer objects will be created on the managed heap thereby reducing the number of garbage collections required by your application.
 
 10 Furthermore, you will get compile-time type safety, and your source code will be cleaner due to fewer casts. 
+
+### Chapter 6 Type and Memmber Basics
+
+1. Basically, when you add a key/value pair to a collection, a hash code for the key object is obtained
+first. This hash code indicates which “bucket” the key/value pair should be stored in. When the
+collection needs to look up a key, it gets the hash code for the specified key object. This code identifies
+the “bucket” that is now searched sequentially, looking for a stored key object that is equal to the
+specified key object. Using this algorithm of storing and looking up keys means that if you change a
+key object that is in a collection, the collection will no longer be able to find the object. If you intend to
+change a key object in a hash table, you should remove the original key/value pair, modify the key
+object, and then add the new key/value pair back into the hash table.
+2. A static event is a mechanism that allows a type to send a notification to one or more
+static or instance methods. An instance (nonstatic) event is a mechanism that allows an object
+to send a notification to one or more static or instance methods. Events are usually raised in
+response to a state change occurring in the type or object offering the event. An event consists
+of two methods that allow static or instance methods to register and unregister interest in the
+event. In addition to the two methods, events typically use a delegate field to maintain the set
+of registered methods 
+3. If you do not explicitly specify either of these when you define a type, the C# compiler sets the type’s
+visibility to  internal.
+4. The CLR and C# support this via friend assemblies. This friend assembly
+feature is also useful when you want to have one assembly containing code that performs unit tests against the internal types within another assembly. When an assembly is built, it can indicate other assemblies it considers “friends” by using the InternalsVisibleTo attribute defined in the  System.Runtime.CompilerServices namespace.
