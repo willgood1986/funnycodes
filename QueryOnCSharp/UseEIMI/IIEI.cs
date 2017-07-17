@@ -4,13 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventLogGroupByDescription
+namespace UseEIMI
 {
-	class Program
+	struct IIEI 
 	{
-		static void Main(string[] args)
-		{
-			
-		}
 	}
 }

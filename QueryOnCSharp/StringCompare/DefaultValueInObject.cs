@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventLogGroupByDescription
+namespace StringCompare
 {
-	class Program
+	class DefaultValueInObject
 	{
-		static void Main(string[] args)
-		{
-			
-		}
+		internal String Name { get; set; }
 	}
 }
