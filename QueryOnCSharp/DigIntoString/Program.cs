@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,11 +71,30 @@ namespace DigIntoString
 
 		static void Main(string[] args)
 		{
-			//DifferentFormats.FormatDateTime();
+			FileStream fs = null;
 
-			//DifferentFormats.FormatEnumerateType();
+			StreamWriter sw = null;
 
-			//DifferentFormats.FormatNumbers();
+			TextWriter tw = Console.Out;
+
+			try
+			{
+				fs = new FileStream(@".\Console.log", FileMode.OpenOrCreate, FileAccess.Write);
+				sw = new StreamWriter(fs);
+				Console.WriteLine("Successfully redirect");
+			}
+			catch
+			{ 
+				Console.WriteLine("Can not redirect console..");
+			}
+
+			Console.SetOut(sw);
+
+			// DifferentFormats.FormatDateTime();
+
+			// DifferentFormats.FormatEnumerateType();
+
+			 //DifferentFormats.FormatNumbers();
 
 			//System.Globalization.CultureInfo.CurrentCulture
 
@@ -85,7 +105,12 @@ namespace DigIntoString
 
 			// TestEncoding();
 
-			EncodeAndDecodeWithBase64();
+			//EncodeAndDecodeWithBase64();
+
+			Console.SetOut(tw);
+			
+			sw.Close();
+			fs.Close();
 
 			Console.ReadLine();
 		}
