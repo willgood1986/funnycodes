@@ -13,6 +13,9 @@ namespace Rainy.CsharpTesting
 			get;
 		}
 
-		String Testing
+        String Testing
+        {
+            get;
+        }
     }
 }

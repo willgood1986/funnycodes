@@ -14,7 +14,7 @@ namespace TestConstant
 
         internal String GetDescription()
         {
-            var 
+            throw new NotImplementedException();
         }
     }
 }

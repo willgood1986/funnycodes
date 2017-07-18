@@ -8,7 +8,7 @@ namespace TestEIMI
 {
     class Program
     {
-        private static TestConvert()
+        private static void TestConvert()
         {
             var numberString = "280";
 

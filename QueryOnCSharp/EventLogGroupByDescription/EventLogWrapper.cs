@@ -61,8 +61,10 @@ namespace EventLogGroupByDescription
 			}
 			else
 			{
-				result = new EventLogEntryCollection(); 
+                result = null;
 			}
+
+            return result;
 		}
 	}
 }

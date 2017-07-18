@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleRedirector;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,7 +23,7 @@ namespace DigIntoString
 			{
 				return Convert.ToByte(s, 16);
 			}
-			catch (Exception exception)
+			catch
 			{
 				Console.WriteLine("Invalid input: {0}", s);
 
@@ -71,46 +72,39 @@ namespace DigIntoString
 
 		static void Main(string[] args)
 		{
-			FileStream fs = null;
+            IConsoleOutputRedirector consoleRedirector = new ConsoleRedirectToFile();
 
-			StreamWriter sw = null;
+            consoleRedirector.OpenOutput();
 
-			TextWriter tw = Console.Out;
+            if (consoleRedirector.IsOutputOpened)
+            {
+                try
+                {
+                    consoleRedirector.SetOutput();
+                    
+                    DifferentFormats.FormatDateTime();
 
-			try
-			{
-				fs = new FileStream(@".\Console.log", FileMode.OpenOrCreate, FileAccess.Write);
-				sw = new StreamWriter(fs);
-				Console.WriteLine("Successfully redirect");
-			}
-			catch
-			{ 
-				Console.WriteLine("Can not redirect console..");
-			}
+                    // DifferentFormats.FormatEnumerateType();
 
-			Console.SetOut(sw);
+                    //DifferentFormats.FormatNumbers();
 
-			// DifferentFormats.FormatDateTime();
+                    //System.Globalization.CultureInfo.CurrentCulture
 
-			// DifferentFormats.FormatEnumerateType();
+                    //Console.WriteLine(String.Format(null, sample));
 
-			 //DifferentFormats.FormatNumbers();
+                    //var sb = new StringBuilder();
+                    //sb.AppendFormat();
 
-			//System.Globalization.CultureInfo.CurrentCulture
+                    // TestEncoding();
 
-			//Console.WriteLine(String.Format(null, sample));
-
-			//var sb = new StringBuilder();
-			//sb.AppendFormat();
-
-			// TestEncoding();
-
-			//EncodeAndDecodeWithBase64();
-
-			Console.SetOut(tw);
-			
-			sw.Close();
-			fs.Close();
+                    //EncodeAndDecodeWithBase64();
+                }
+                finally
+                {
+                    consoleRedirector.RestoreOutput();
+                    consoleRedirector.CloseOutput();
+                }
+            }
 
 			Console.ReadLine();
 		}
