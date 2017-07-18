@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JudgeImageType", "JudgeImageType\JudgeImageType.csproj", "{47E6398B-23FA-4E68-8DB3-7A06D3A907BA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestListThreadSafety", "TestListThreadSafety\TestListThreadSafety.csproj", "{E9F5411C-E5EE-4961-B44C-02A5713BF244}"
@@ -28,6 +28,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetTypeFromStruct", "GetTypeFromStruct\GetTypeFromStruct.csproj", "{84EC8B5D-73AB-430D-BBEC-7DA792E85525}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventLogGroupByDescription", "EventLogGroupByDescription\EventLogGroupByDescription.csproj", "{162D19E3-1C43-4992-88CE-FF637B860C18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConstant", "TestConstant\TestConstant.csproj", "{665A4059-B469-47FB-9A3C-DE299C88C1E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEIMI", "TestEIMI\TestEIMI.csproj", "{4E2FDFA0-EC9C-4501-B3B5-F642DA75A8AF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,6 +95,14 @@ Global
 		{162D19E3-1C43-4992-88CE-FF637B860C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{162D19E3-1C43-4992-88CE-FF637B860C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{162D19E3-1C43-4992-88CE-FF637B860C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665A4059-B469-47FB-9A3C-DE299C88C1E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665A4059-B469-47FB-9A3C-DE299C88C1E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665A4059-B469-47FB-9A3C-DE299C88C1E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665A4059-B469-47FB-9A3C-DE299C88C1E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E2FDFA0-EC9C-4501-B3B5-F642DA75A8AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E2FDFA0-EC9C-4501-B3B5-F642DA75A8AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E2FDFA0-EC9C-4501-B3B5-F642DA75A8AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E2FDFA0-EC9C-4501-B3B5-F642DA75A8AF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
