@@ -4,13 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventLogGroupByDescription
+namespace Rainy.CsharpTesting
 {
-	class Program
-	{
-		static void Main(string[] args)
+    public interface ICsharpTesting
+    {
+		String TestingTitle
 		{
-			
+			get;
 		}
-	}
+
+		String Testing
+    }
 }

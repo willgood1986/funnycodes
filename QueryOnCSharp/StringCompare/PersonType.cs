@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventLogGroupByDescription
+namespace StringCompare
 {
-	class Program
+	enum PersonType
 	{
-		static void Main(string[] args)
-		{
-			
-		}
+		Man, Woman
 	}
 }

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventLogGroupByDescription
+namespace ViewConvert
 {
 	class Program
 	{
 		static void Main(string[] args)
 		{
-			
+			// Convert.ChangeType()
 		}
 	}
 }

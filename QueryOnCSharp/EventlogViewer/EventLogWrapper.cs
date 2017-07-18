@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EventLogGroupByDescription
+namespace EventlogViewer
 {
 	class EventLogWrapper
 	{
@@ -37,7 +37,7 @@ namespace EventLogGroupByDescription
 			return result;
 		}
 
-		EventLogWrapper(
+		public EventLogWrapper(
 			String i_eventLogName,
 			String i_serverName
 			)
@@ -51,6 +51,14 @@ namespace EventLogGroupByDescription
 			}
 		}
 
+		public Boolean EventLogFound
+		{
+			get
+			{
+				return m_eventLog != null;
+			}
+		}
+
 		internal EventLogEntryCollection EnumerateAllEvents()
 		{
 			EventLogEntryCollection result = null;
@@ -61,8 +69,10 @@ namespace EventLogGroupByDescription
 			}
 			else
 			{
-				result = new EventLogEntryCollection(); 
+				
 			}
+
+			return result;
 		}
 	}
 }
