@@ -1,0 +1,8 @@
+value	Symbol
+-----	----
+    0	Unknown
+    1	UserMailbox
+    2	RoomMailbox
+    4	EquipmentMailbox
+
+
