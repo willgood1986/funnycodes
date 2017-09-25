@@ -12,8 +12,9 @@ namespace ArrayBinarySearchTest
 		{
 			const Int32 TargetValue = 3;
 
-			var array = new Int32[] { 1, 2, 6, 3, 4, 5 };
+			var array = new Int32[] { 1, 2, 3, 4, 5, 6 };
 
+			// Array.BinarySearch works on an ordered list
 			var foundIndex = Array.BinarySearch(array, 3);
 
 			Console.WriteLine("The item {0}, found index:{1}", TargetValue, foundIndex);

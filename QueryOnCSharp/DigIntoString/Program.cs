@@ -45,9 +45,11 @@ namespace DigIntoString
 
 			var encodedString = BitConverter.ToString(encodedBytes);
 
-			var results = encodedString.Split(new Char[] { '-' }, StringSplitOptions.RemoveEmptyEntries).Select(b => Convert.ToByte(b, 16)).ToArray<Byte>();
-
 			Console.WriteLine("Encoded bytes:" + BitConverter.ToString(encodedBytes));
+
+			var results = encodedString.Split(
+				new Char[] { '-' }, StringSplitOptions.RemoveEmptyEntries).Select(
+				b => Convert.ToByte(b, 16)).ToArray<Byte>();
 
 			Console.WriteLine("Decoded result: {0}", encodingUTF8.GetString(results));
 		}
@@ -82,22 +84,23 @@ namespace DigIntoString
                 {
                     consoleRedirector.SetOutput();
                     
-                    DifferentFormats.FormatDateTime();
+                   // DifferentFormats.FormatDateTime();
 
-                    // DifferentFormats.FormatEnumerateType();
+                   //DifferentFormats.FormatEnumerateType();
 
-                    //DifferentFormats.FormatNumbers();
+                   //DifferentFormats.FormatNumbers();
 
                     //System.Globalization.CultureInfo.CurrentCulture
 
-                    //Console.WriteLine(String.Format(null, sample));
+					// var sample = "It's a sample.";
+					// Console.WriteLine(String.Format(null, sample));
 
                     //var sb = new StringBuilder();
                     //sb.AppendFormat();
 
                     // TestEncoding();
 
-                    //EncodeAndDecodeWithBase64();
+                    EncodeAndDecodeWithBase64();
                 }
                 finally
                 {

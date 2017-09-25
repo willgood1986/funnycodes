@@ -21,17 +21,6 @@ namespace ConsoleRedirector
 
         private static readonly TextWriter ConsoleDefaultOutput = Console.Out;
 
-        //try
-        //{
-        //    fs = new FileStream(@".\Console.log", FileMode.OpenOrCreate, FileAccess.Write);
-        //    sw = new StreamWriter(fs);
-        //    Console.WriteLine("Successfully redirect");
-        //}
-        //catch
-        //{ 
-        //    Console.WriteLine("Can not redirect console..");
-        //}
-
         public Boolean OpenOutput()
         {
 
@@ -78,8 +67,7 @@ namespace ConsoleRedirector
         {
             if (m_outputOpened)
             {
-                m_streamWriter.Close();
-                m_fileStream.Close();
+				m_streamWriter.Dispose();
             }
         }
 
@@ -90,7 +78,7 @@ namespace ConsoleRedirector
             m_outputFile = i_outputFile;
         }
 
-        public ConsoleRedirectToFile()
+        public  ConsoleRedirectToFile()
             : this(DefaultLogFile)
         { }
     }

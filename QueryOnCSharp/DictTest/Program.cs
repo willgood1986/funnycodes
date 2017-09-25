@@ -19,10 +19,6 @@ namespace DictTest
 			Console.WriteLine("Add a key for dictionary.");
 
 			map["jim"] = new List<Int32>();
-
-			List<Int32> nums;
-			HashSet<Int32> newNums;
-
 		}
 
 		static void Main(string[] args)

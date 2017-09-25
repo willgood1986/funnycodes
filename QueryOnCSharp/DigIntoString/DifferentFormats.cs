@@ -107,7 +107,7 @@ namespace DigIntoString
 
 			Console.WriteLine("{0:T}", now);
 
-			PrintFormat("'u' - universal time time in ISO 8601");
+			PrintFormat("'u' - universal time in ISO 8601");
 
 			Console.WriteLine("{0:u}", now);
 
