@@ -72,8 +72,6 @@ namespace CheckEventLogId
 			//Test();
 
 			CompareDateTime();
-
-			Console.ReadLine();
 		}
 	}
 }

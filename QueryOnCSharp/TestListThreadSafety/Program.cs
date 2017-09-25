@@ -40,7 +40,7 @@ namespace TestListThreadSafety
 						{
 							try
 							{
-								lock (locker)
+								// lock (locker)
 								{
 									nums.Add(i);
 								}
@@ -56,7 +56,7 @@ namespace TestListThreadSafety
 
 			while (counter < MaxCount)
 			{
-				Thread.Sleep(500);
+				//Thread.Sleep(500);
 			}
 
 			Console.WriteLine("Item count in list expected:{0}, actual:{1}", MaxCount, nums.Count);
