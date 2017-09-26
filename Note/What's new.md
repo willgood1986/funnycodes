@@ -71,4 +71,25 @@ Origin:200 -> C8
 10. Print a byte array we can call BitConverter.ToString(ByteArray)
     Convert.ToByte(Char, 16)
 11. Encoding.UTF8.GetBytes(String); Convert.ToBase64String();Convert.FromBase64String; Encoding.UTF8.GetString
-12. 
+12. Use an event as a lock to wait for multiple tasks. var lock = new AutoResetEvent(false); ThreadPool.QueueUserWorkItem(delegate { if () {lock.Set()}}, i); eventLock.WaitOne();
+13. To judge the real type of an image:
+    using (var img = Image.FromFile(image))
+			{
+				if (System.Drawing.Imaging.ImageFormat.Bmp.Equals(img.RawFormat))
+				{
+					Console.WriteLine("The real format: {0}", "bmp");
+				}
+
+				if (System.Drawing.Imaging.ImageFormat.Jpeg.Equals(img.RawFormat))
+				{
+					Console.WriteLine("The real format: {0}", "jpeg");
+				}
+			}
+14. Nullable actually works as a wrapper of value type. When querying its type, it will return the backend real type. When converting types, it will work complying with the actual type.
+15. var startInfo = new ProcessStartInfo(); var process = Process.Start(startInfo); process.WaitForExit();
+16. Char.GetNumericValue only accept a char that represents a number.
+17. Convert.ToByte(String, base); If it is a hex string, you should set the base to 16.
+18. UTF8.ToByte -> Change the string into a hex based string.
+19. Custom Dispose Model(1. Release res once 2. Manual dispose will cover managed and unmanaged, take the current object off Finalization Queue 3. In finalization, only release unmanaged res)
+20. AppDomain.CreateInstanceAndUnwrap needs full qualified domain name of asselby and type.
+21. 

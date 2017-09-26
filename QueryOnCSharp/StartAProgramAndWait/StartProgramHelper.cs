@@ -41,6 +41,7 @@ namespace StartAProgramAndWait
 			var startInfo = new ProcessStartInfo();
 			startInfo.FileName = i_fileName;
 			startInfo.Arguments = i_arguments;
+
 			try
 			{
 				var process = Process.Start(startInfo);

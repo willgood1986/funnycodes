@@ -27,6 +27,7 @@ namespace TestSelfDoublePlus
 			{
 				Console.WriteLine("Readonly field can be edited in the constructor.");
 			}
+
 			return result;
 		}
 	}

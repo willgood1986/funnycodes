@@ -21,11 +21,11 @@ namespace TestInterLockedExchangeCompare
 
 		private static void TestThread()
 		{
-			Console.WriteLine("Enter thread {0}, before WaitOne", Thread.CurrentThread.Name);
+			//Console.WriteLine("Enter thread {0}, before WaitOne", Thread.CurrentThread.Name);
 			eventLock.WaitOne();
-			Console.WriteLine("Enter thread {0}, after WaitOne", Thread.CurrentThread.Name);
+			//Console.WriteLine("Enter thread {0}, after WaitOne", Thread.CurrentThread.Name);
 
-			for (int i = 1; i <= 4; i++)
+			for (int i = 1; i <= 10000; i++)
 			{
 				//var testValue = random.NextDouble();
 
@@ -33,11 +33,11 @@ namespace TestInterLockedExchangeCompare
 
 				control += testValue;
 
-				Console.WriteLine("[Before]Safe Flag is {0}, loop index: {1}, thread name:{2}", safeFlag, i, Thread.CurrentThread.Name);
+				//Console.WriteLine("[Before]Safe Flag is {0}, loop index: {1}, thread name:{2}", safeFlag, i, Thread.CurrentThread.Name);
 
 				Interlocked.Increment(ref safeFlag);
 
-				Console.WriteLine("[After]Safe Flag is {0}, loop index: {1}, thread name:{2}", safeFlag, i, Thread.CurrentThread.Name);
+				//Console.WriteLine("[After]Safe Flag is {0}, loop index: {1}, thread name:{2}", safeFlag, i, Thread.CurrentThread.Name);
 
 				ts.AddTotal(testValue);
 

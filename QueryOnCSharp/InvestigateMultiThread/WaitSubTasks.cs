@@ -21,7 +21,7 @@ namespace InvestigateMultiThread
 
 			for (Int32 i = 1; i <= MaxTaskNumber; i++)
 			{
-				Console.WriteLine("Loop at {0}", i);
+				//Console.WriteLine("Loop at {0}", i);
 
 				ThreadPool.QueueUserWorkItem(
 					item =>
@@ -35,7 +35,7 @@ namespace InvestigateMultiThread
 							eventLock.Set();
 						}
 
-						Console.WriteLine("Task left number: {0}", taskLeft);
+						//Console.WriteLine("Task left number: {0}", taskLeft);
 							
 					}, i);
 			}
@@ -46,6 +46,8 @@ namespace InvestigateMultiThread
 			//{
 			//	Console.WriteLine("item: {0}", item);
 			//}
+
+			Console.WriteLine("All tasks are finished. Results are as followed:");
 
 			Array.ForEach(results, Console.WriteLine);
 		}
