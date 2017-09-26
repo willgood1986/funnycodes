@@ -92,4 +92,6 @@ Origin:200 -> C8
 18. UTF8.ToByte -> Change the string into a hex based string.
 19. Custom Dispose Model(1. Release res once 2. Manual dispose will cover managed and unmanaged, take the current object off Finalization Queue 3. In finalization, only release unmanaged res)
 20. AppDomain.CreateInstanceAndUnwrap needs full qualified domain name of asselby and type.
-21. 
+21. var thread = new Thread(Func); It does not create a physical operating system thread. To actually create the operating system thread and have it start executing the callback method, you must call Thread.Start
+22. Default Thread object is Foreground thread. That is, it would prevent the process from being terminated.
+23. ThreadPool does not provide a way to query the status of background tasks.

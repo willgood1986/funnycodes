@@ -63,6 +63,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonDisposeModel", "Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SafeUpdateWithCompareExchange", "SafeUpdateWithCompareExchange\SafeUpdateWithCompareExchange.csproj", "{5CDB77ED-85C5-4B69-AC15-3A8BF7593DFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestForeground", "TestForeground\TestForeground.csproj", "{1A62AB2A-2E73-47A8-85D9-2CFCEB0FA71E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkWithMultipleThreads", "WorkWithMultipleThreads\WorkWithMultipleThreads.csproj", "{984A7C47-E64B-4FBA-B4DA-E71DC508ED69}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -193,6 +197,14 @@ Global
 		{5CDB77ED-85C5-4B69-AC15-3A8BF7593DFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5CDB77ED-85C5-4B69-AC15-3A8BF7593DFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5CDB77ED-85C5-4B69-AC15-3A8BF7593DFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A62AB2A-2E73-47A8-85D9-2CFCEB0FA71E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A62AB2A-2E73-47A8-85D9-2CFCEB0FA71E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A62AB2A-2E73-47A8-85D9-2CFCEB0FA71E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A62AB2A-2E73-47A8-85D9-2CFCEB0FA71E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{984A7C47-E64B-4FBA-B4DA-E71DC508ED69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{984A7C47-E64B-4FBA-B4DA-E71DC508ED69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{984A7C47-E64B-4FBA-B4DA-E71DC508ED69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{984A7C47-E64B-4FBA-B4DA-E71DC508ED69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
