@@ -1,0 +1,3 @@
+ReportServer?formlet=demo/homepage/finereport.frm
+
+SELECT U.UserName, Sum(Amount) AS TotalAmount FROM T_Sale S Left Join T_USER U ON S.UserId = U.UserId Group by U.UserName

@@ -1,0 +1,9 @@
+http://ip:??/appName/ReportServer?reportlet=GettingStarted.cpt
+
+http://localhost:8080/WebReport/ReportServer?reportlet=GettingStarted.cpt
+
+FRRainy-PersonalPerformance.frm
+
+FRRainy-PersonalPerformance.frm
+
+ReportServer?formlet=demo/homepage/FRRainy-PersonalPerformance.frm
